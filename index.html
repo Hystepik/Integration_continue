@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {font-family: Arial, Helvetica, sans-serif;}
+            
+            /* The Modal (background) */
+            .modal {
+              display: none; /* Hidden by default */
+              position: fixed; /* Stay in place */
+              z-index: 1; /* Sit on top */
+              padding-top: 100px; /* Location of the box */
+              left: 0;
+              top: 0;
+              width: 100%; /* Full width */
+              height: 100%; /* Full height */
+              overflow: auto; /* Enable scroll if needed */
+              background-color: rgb(0,0,0); /* Fallback color */
+              background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }
+            
+            /* Modal Content */
+            .modal-content {
+              background-color: #fefefe;
+              margin: auto;
+              padding: 20px;
+              border: 1px solid #888;
+              width: 80%;
+            }
+            
+            /* The Close Button */
+            .close {
+              color: #aaaaaa;
+              float: right;
+              font-size: 28px;
+              font-weight: bold;
+            }
+            
+            .close:hover,
+            .close:focus{
+              color: #000;
+              text-decoration: none;
+              cursor: pointer;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <form action="http://localhost/" method="post">
+            <div class="container">
+              <label for="email"><b>Adresse e-mail</b></label>
+              <input type="text" placeholder="Entrer une adresse e-mail" name="email" required>
+          
+              <label for="psw"><b>Mot de Passe</b></label>
+              <input type="password" placeholder="Entrer un Mot de Passe" name="psw" required>
+          
+              <button type="submit">Connexion</button>
+            </div>
+        </form>
+
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtnGet">Open Modal Get</button>
+
+        <!-- The Modal -->
+        <div id="ModalGet" class="modal">
+            
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span id="closeGet" class="close">&times;</span>
+                <p>Get</p>
+            </div>
+        </div>
+
+
+        <button id="myBtnProduct">Open Modal Product</button>
+
+        <!-- The Modal -->
+        <div id="ModalProduct" class="modal">
+            
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span id="closeProduct" class="close">&times;</span>
+                <p>Product</p>
+            </div>
+        </div>
+        <script>
+            // Get the modal
+            var modalGet = document.getElementById("ModalGet");
+            var modalProduct = document.getElementById("ModalProduct");
+            
+            // Get the button that opens the modal
+            var btnGet = document.getElementById("myBtnGet");
+            var btnProduct = document.getElementById("myBtnProduct");
+            
+            // Get the <span> element that closes the modal
+            var spanGet = document.getElementsById("closeGet");
+            var spanProduct = document.getElementsById("closeProduct");
+            
+            // When the user clicks the button, open the modal 
+            btnGet.onclick = function() {
+                modalGet.style.display = "block";
+            }
+            btnProduct.onclick = function() {
+                modalProduct.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            spanGet.onclick = function() {
+                modalGet.style.display = "none";
+            }
+            spanProduct.onclick = function() {
+                modalProduct.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modalGet) {
+                modalGet.style.display = "none";
+              }
+              if (event.target == modalGet) {
+                modalProduct.style.display = "none";
+              }
+            }
+        </script>
+    </body>
+</html>

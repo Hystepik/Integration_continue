@@ -1,10 +1,10 @@
-﻿-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 04 jan. 2021 à 11:15
--- Version du serveur :  10.4.10-MariaDB
+-- Hôte : 127.0.0.1:3308
+-- Généré le :  lun. 04 jan. 2021 à 11:51
+-- Version du serveur :  8.0.18
 -- Version de PHP :  7.4.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -65,7 +65,6 @@ CREATE TABLE IF NOT EXISTS `costumer` (
 --
 
 INSERT INTO `costumer` (`id`, `Name`, `Phone number`, `Email address`, `mdp`) VALUES
-
 (1, 'jacques', 610203060, 'jacques.sparow@jaipasdidee.fr', 'azerty'),
 (2, 'michel', 690807060, 'michel.cestle@bresil.fr', 'azerty'),
 (3, 'lucifer', 666666666, 'lucifer.ilfaitchaud@enfer.fr', 'azerty'),
@@ -93,7 +92,8 @@ CREATE TABLE IF NOT EXISTS `product` (
 --
 
 INSERT INTO `product` (`Id_product`, `Name_product`, `Cout_de_fabrication`) VALUES
-(1, 'pneu', 150),(2, 'portiere', 200),
+(1, 'pneu', 150),
+(2, 'portiere', 200),
 (3, 'pot_d_echappement', 45),
 (4, 'essuie_glace', 20),
 (5, 'culasse', 400),

@@ -1,6 +1,4 @@
 /target/
-# fichiers maven a ignorer
-target
 
 # fichiers Eclipse a ignorer
 .classpath

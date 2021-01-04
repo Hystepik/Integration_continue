@@ -1,9 +1,9 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 04 jan. 2021 à 10:31
+-- Généré le :  lun. 04 jan. 2021 à 11:15
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.4.0
 
@@ -41,13 +41,8 @@ CREATE TABLE IF NOT EXISTS `contract` (
 INSERT INTO `contract` (`Id_contract`, `Marge`) VALUES
 (1, 5),
 (2, 10),
-(1, 5),
-(2, 10),
 (3, 15),
 (4, 20),
-(3, 15),
-(4, 20),
-(5, 25),
 (5, 25);
 
 -- --------------------------------------------------------
@@ -61,24 +56,24 @@ CREATE TABLE IF NOT EXISTS `costumer` (
   `id` int(11) NOT NULL,
   `Name` varchar(250) NOT NULL,
   `Phone number` int(11) NOT NULL,
-  `Email address` varchar(250) NOT NULL
+  `Email address` varchar(250) NOT NULL,
+  `mdp` varchar(250) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `costumer`
 --
 
-INSERT INTO `costumer` (`id`, `Name`, `Phone number`, `Email address`) VALUES
-(1, 'jacques', 610203060, 'jacques.sparow@jaipasdidee.fr'),
-(2, 'michel', 690807060, 'michel.cestle@bresil.fr'),
-(1, 'jacques', 610203060, 'jacques.sparow@jaipasdidee.fr'),
-(2, 'michel', 690807060, 'michel.cestle@bresil.fr'),
-(3, 'lucifer', 666666666, 'lucifer.ilfaitchaud@enfer.fr'),
-(4, 'noel', 3630, 'noel.pere@polenord.fr'),
-(5, 'mike', 611223366, 'mike.et@disney.fr'),
-(6, 'sauce', 612405060, 'sauce.no@ketchup.fr'),
-(7, 'barak', 651121111, 'barak.omama@maisonblanccasse.fr'),
-(8, 'urge', 601816911, 'urge.ence@samu.fr');
+INSERT INTO `costumer` (`id`, `Name`, `Phone number`, `Email address`, `mdp`) VALUES
+
+(1, 'jacques', 610203060, 'jacques.sparow@jaipasdidee.fr', 'azerty'),
+(2, 'michel', 690807060, 'michel.cestle@bresil.fr', 'azerty'),
+(3, 'lucifer', 666666666, 'lucifer.ilfaitchaud@enfer.fr', 'azerty'),
+(4, 'noel', 3630, 'noel.pere@polenord.fr', 'azerty'),
+(5, 'mike', 611223366, 'mike.et@disney.fr', 'azerty'),
+(6, 'sauce', 612405060, 'sauce.no@ketchup.fr', 'azerty'),
+(7, 'barak', 651121111, 'barak.omama@maisonblanccasse.fr', 'azerty'),
+(8, 'urge', 601816911, 'urge.ence@samu.fr', 'azerty');
 
 -- --------------------------------------------------------
 
@@ -98,10 +93,7 @@ CREATE TABLE IF NOT EXISTS `product` (
 --
 
 INSERT INTO `product` (`Id_product`, `Name_product`, `Cout_de_fabrication`) VALUES
-(1, 'pneu', 150),
-(2, 'portiere', 200),
-(1, 'pneu', 150),
-(2, 'portiere', 200),
+(1, 'pneu', 150),(2, 'portiere', 200),
 (3, 'pot_d_echappement', 45),
 (4, 'essuie_glace', 20),
 (5, 'culasse', 400),

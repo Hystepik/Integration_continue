@@ -1,10 +1,10 @@
-/target/
+# fichiers maven a ignorer
+target
 
 # fichiers Eclipse a ignorer
-.classpath
+web_app/.classpath
 .project
 .settings
-../.metadata/
 
 # fichiers Itellij IDEA a ignorer
 .idea

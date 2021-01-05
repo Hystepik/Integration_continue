@@ -11,6 +11,7 @@ public class CustomerDao{
 	public float getMarge(String login, String password) {
 		if (customerExist(login, password))
 		{
+			//requete sql pour obtenir la marge
 			return 5;
 		}
 		else
@@ -22,8 +23,8 @@ public class CustomerDao{
 		boolean result = false;
 		try
 		{	    
-			int nbResult = em.createQuery("SELECT id FROM customer c WHERE c.Name LIKE :custName AND c.mdp LIKE :custMdp", int.class)
-			.setParameter("custName", login)
+			int nbResult = em.createQuery("SELECT c FROM customer c WHERE c.Email LIKE :custEmail AND c.mdp LIKE :custMdp", int.class)
+			.setParameter("custEmail", login)
 			.setParameter("custMdp", password)
 			.getResultList().size();
 	    

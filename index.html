@@ -54,27 +54,26 @@
     </style>
     <script>
       var url = "https://jsonplaceholder.typicode.com/posts"
+      var type = "GET";
       function sendData() {
         var XHR = new XMLHttpRequest();
 
         var FD = new FormData(form);
 
         XHR.addEventListener("load", function(event) {
-          const queryString = window.location.search;
-          const urlParams = new URLSearchParams(queryString);
-          const token = urlParams.get('token');
-          if(token!="" && token!=null){
-            alert(event.target.responseText);
-          }
+
+          alert(event.target.responseText);
         });
 
         XHR.addEventListener("error", function(event) {
           alert('Oups! Quelque chose s\'est mal passé.');
         });
 
-        XHR.open("GET", url);
-
-        XHR.send(FD);
+        XHR.open(type, url);
+        var object = {};
+        FD.forEach((value, key) => object[key] = value);
+        var json = JSON.stringify(object);
+        XHR.send(json);
       }
     </script>
   </head>

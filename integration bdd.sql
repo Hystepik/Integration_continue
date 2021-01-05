@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3308
--- Généré le :  lun. 04 jan. 2021 à 11:51
+-- Généré le :  mar. 05 jan. 2021 à 08:43
 -- Version du serveur :  8.0.18
 -- Version de PHP :  7.4.0
 
@@ -57,22 +57,23 @@ CREATE TABLE IF NOT EXISTS `costumer` (
   `Name` varchar(250) NOT NULL,
   `Phone number` int(11) NOT NULL,
   `Email address` varchar(250) NOT NULL,
-  `mdp` varchar(250) NOT NULL
+  `mdp` varchar(250) NOT NULL,
+  `Token` varchar(250) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `costumer`
 --
 
-INSERT INTO `costumer` (`id`, `Name`, `Phone number`, `Email address`, `mdp`) VALUES
-(1, 'jacques', 610203060, 'jacques.sparow@jaipasdidee.fr', 'azerty'),
-(2, 'michel', 690807060, 'michel.cestle@bresil.fr', 'azerty'),
-(3, 'lucifer', 666666666, 'lucifer.ilfaitchaud@enfer.fr', 'azerty'),
-(4, 'noel', 3630, 'noel.pere@polenord.fr', 'azerty'),
-(5, 'mike', 611223366, 'mike.et@disney.fr', 'azerty'),
-(6, 'sauce', 612405060, 'sauce.no@ketchup.fr', 'azerty'),
-(7, 'barak', 651121111, 'barak.omama@maisonblanccasse.fr', 'azerty'),
-(8, 'urge', 601816911, 'urge.ence@samu.fr', 'azerty');
+INSERT INTO `costumer` (`id`, `Name`, `Phone number`, `Email address`, `mdp`, `Token`) VALUES
+(1, 'jacques', 610203060, 'jacques.sparow@jaipasdidee.fr', 'azerty', 't7hjd'),
+(2, 'michel', 690807060, 'michel.cestle@bresil.fr', 'azerty', 'gkq2b'),
+(3, 'lucifer', 666666666, 'lucifer.ilfaitchaud@enfer.fr', 'azerty', 'hdstr'),
+(4, 'noel', 3630, 'noel.pere@polenord.fr', 'azerty', 'vty45'),
+(5, 'mike', 611223366, 'mike.et@disney.fr', 'azerty', '6rzwc'),
+(6, 'sauce', 612405060, 'sauce.no@ketchup.fr', 'azerty', 'mlkph'),
+(7, 'barak', 651121111, 'barak.omama@maisonblanccasse.fr', 'azerty', 'ops5m'),
+(8, 'urge', 601816911, 'urge.ence@samu.fr', 'azerty', '7ht3n');
 
 -- --------------------------------------------------------
 

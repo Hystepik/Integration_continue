@@ -13,16 +13,16 @@ INSERT INTO `contract` (`Id_contract`, `Marge`) VALUES
 (4, 20),
 (5, 25);
 
-DROP TABLE IF EXISTS `costumer`;
-CREATE TABLE IF NOT EXISTS `costumer` (
+DROP TABLE IF EXISTS `customer`;
+CREATE TABLE IF NOT EXISTS `customer` (
   `id` int(11) NOT NULL,
   `Name` varchar(250) NOT NULL,
   `Phone number` int(11) NOT NULL,
-  `Email address` varchar(250) NOT NULL,
+  `Email` varchar(250) NOT NULL,
   `mdp` varchar(250) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-INSERT INTO `costumer` (`id`, `Name`, `Phone number`, `Email address`, `mdp`) VALUES
+INSERT INTO `customer` (`id`, `Name`, `Phone number`, `Email`, `mdp`) VALUES
 
 (1, 'jacques', 610203060, 'jacques.sparow@jaipasdidee.fr', 'azerty'),
 (2, 'michel', 690807060, 'michel.cestle@bresil.fr', 'azerty'),

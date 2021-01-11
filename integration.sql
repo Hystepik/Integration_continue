@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3308
--- Généré le :  mar. 05 jan. 2021 à 08:43
+-- Généré le :  lun. 11 jan. 2021 à 08:25
 -- Version du serveur :  8.0.18
 -- Version de PHP :  7.4.0
 
@@ -31,7 +31,9 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `contract`;
 CREATE TABLE IF NOT EXISTS `contract` (
   `Id_contract` int(11) NOT NULL,
-  `Marge` float NOT NULL
+  `Marge` float NOT NULL,
+  PRIMARY KEY (`Id_contract`),
+  UNIQUE KEY `Id_contract` (`Id_contract`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -58,22 +60,26 @@ CREATE TABLE IF NOT EXISTS `costumer` (
   `Phone number` int(11) NOT NULL,
   `Email address` varchar(250) NOT NULL,
   `mdp` varchar(250) NOT NULL,
-  `Token` varchar(250) NOT NULL
+  `Token` varchar(250) NOT NULL,
+  `id_contract` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`),
+  KEY `FK_costumer_contract` (`id_contract`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `costumer`
 --
 
-INSERT INTO `costumer` (`id`, `Name`, `Phone number`, `Email address`, `mdp`, `Token`) VALUES
-(1, 'jacques', 610203060, 'jacques.sparow@jaipasdidee.fr', 'azerty', 't7hjd'),
-(2, 'michel', 690807060, 'michel.cestle@bresil.fr', 'azerty', 'gkq2b'),
-(3, 'lucifer', 666666666, 'lucifer.ilfaitchaud@enfer.fr', 'azerty', 'hdstr'),
-(4, 'noel', 3630, 'noel.pere@polenord.fr', 'azerty', 'vty45'),
-(5, 'mike', 611223366, 'mike.et@disney.fr', 'azerty', '6rzwc'),
-(6, 'sauce', 612405060, 'sauce.no@ketchup.fr', 'azerty', 'mlkph'),
-(7, 'barak', 651121111, 'barak.omama@maisonblanccasse.fr', 'azerty', 'ops5m'),
-(8, 'urge', 601816911, 'urge.ence@samu.fr', 'azerty', '7ht3n');
+INSERT INTO `costumer` (`id`, `Name`, `Phone number`, `Email address`, `mdp`, `Token`, `id_contract`) VALUES
+(1, 'jacques', 610203060, 'jacques.sparow@jaipasdidee.fr', 'azerty', 't7hjd', 0),
+(2, 'michel', 690807060, 'michel.cestle@bresil.fr', 'azerty', 'gkq2b', 0),
+(3, 'lucifer', 666666666, 'lucifer.ilfaitchaud@enfer.fr', 'azerty', 'hdstr', 0),
+(4, 'noel', 3630, 'noel.pere@polenord.fr', 'azerty', 'vty45', 0),
+(5, 'mike', 611223366, 'mike.et@disney.fr', 'azerty', '6rzwc', 0),
+(6, 'sauce', 612405060, 'sauce.no@ketchup.fr', 'azerty', 'mlkph', 0),
+(7, 'barak', 651121111, 'barak.omama@maisonblanccasse.fr', 'azerty', 'ops5m', 0),
+(8, 'urge', 601816911, 'urge.ence@samu.fr', 'azerty', '7ht3n', 0);
 
 -- --------------------------------------------------------
 

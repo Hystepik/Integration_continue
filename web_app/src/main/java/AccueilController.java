@@ -1,6 +1,4 @@
-import java.util.Dictionary;
 import java.util.List;
-import java.util.Enumeration;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;

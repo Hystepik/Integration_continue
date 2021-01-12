@@ -39,7 +39,7 @@ public class AccueilController {
 	}
 	public int getProductCout(int id)
     {
-        if (id < 0)
+        if (id > 0)
             return (int)TVA;
         else return -1;
     }

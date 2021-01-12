@@ -39,9 +39,9 @@ public class AccueilController {
 	}
 	
 	public int getProductCout(int id)
-	{
-		if (id > 2)
-			return (int)TVA;
-		else return -1;
-	}
+    {
+        if (id > 0)
+            return (int)TVA;
+        else return -1;
+    }
 }

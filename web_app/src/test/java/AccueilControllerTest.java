@@ -1,4 +1,5 @@
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,7 +17,7 @@ public class AccueilControllerTest{
 	@Test
 	void testListProducts() {
 		assertTrue(true);
-		assertEquals(controller.getProductCout(0), 2));
+		assertEquals(controller.getProductCout(0), 2);
 	}
 
 }

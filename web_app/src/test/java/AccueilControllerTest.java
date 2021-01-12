@@ -22,7 +22,7 @@ public class AccueilControllerTest{
 	}
 	@Test
 	void testGetProductName(){
-		assertTrue(false);
-		assertEquals(controller.getProductCout(1), "jeanma");
+		assertTrue(true);
+		assertEquals(controller.getProductCout(1), "unBonProduit");
 	}
 }

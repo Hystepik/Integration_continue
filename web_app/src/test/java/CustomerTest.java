@@ -19,7 +19,7 @@ private Customer customer;
 	void getCustomerName() {
 		customer.setName("laulau");
 		String name = customer.getName();
-		assertEquals(name, 35);
+		assertEquals(name, "laulau");
 	}
 
 }

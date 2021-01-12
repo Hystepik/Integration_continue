@@ -49,7 +49,7 @@ public class AccueilController {
 		}else if (id < 0 ){
 			return "pas de produit";
 		}else{
-			return 'unBonProduit';
+			return "unBonProduit";
 		}
 	}
 }

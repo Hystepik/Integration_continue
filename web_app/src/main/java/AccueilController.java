@@ -44,5 +44,4 @@ public class AccueilController {
 			return (int)TVA;
 		else return -1;
 	}
-	
 }

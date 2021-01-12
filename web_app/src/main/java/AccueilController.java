@@ -37,4 +37,11 @@ public class AccueilController {
 		}
 		return json.toJSONString();
 	}
+	
+	public int getProductCout(int id)
+	{
+		if (id > 2)
+			return (int)TVA;
+		else return -1;
+	}
 }

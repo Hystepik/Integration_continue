@@ -18,7 +18,8 @@ public class AccueilControllerTest{
 	}
 	@Test
 	void testListProducts() {
-		assertTrue(true);
-	}
+ 		assertTrue(true);
+		assertEquals(controller.getProductCout(0), 2);
+ 	}
 
 }

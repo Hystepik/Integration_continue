@@ -22,4 +22,8 @@ public class AccueilControllerTest{
 		assertTrue(true);
 		assertEquals(controller.getProductCout(2), 15);
 	}
+	voids testGetProductName(){
+		assertTrue(false);
+		assertEquals(controller.getProductCout(1), "jeanma");
+	}
 }

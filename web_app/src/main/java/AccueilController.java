@@ -43,8 +43,8 @@ public class AccueilController {
             return (int)TVA;
         else return -1;
     }
-	public string getProductName (int id){
-		if (id = 0){
+	public String getProductName (int id){
+		if (id == 0){
 			return "pas de produit";
 		}else if (id < 0 ){
 			return "pas de produit";

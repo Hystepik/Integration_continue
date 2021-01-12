@@ -1,6 +1,9 @@
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,8 +18,8 @@ public class AccueilControllerTest{
 	}
 	@Test
 	void testListProducts() {
-		assertTrue(true);
-		assertEquals(controller.getProductCout(0), 2));
-	}
+ 		assertTrue(true);
+		assertEquals(controller.getProductCout(0), 2);
+ 	}
 
 }

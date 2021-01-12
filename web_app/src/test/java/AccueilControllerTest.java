@@ -20,6 +20,6 @@ public class AccueilControllerTest{
 	@Test
 	void testListProducts() {
 		assertTrue(true);
-		assertEquals(controller.getProductCout(15), 2);
+		assertEquals(controller.getProductCout(2), 15);
 	}
 }

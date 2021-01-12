@@ -30,9 +30,9 @@ public class AccueilController {
 		for (Product p : listProduct)
 		{
 			JSONArray array = new JSONArray();
-			array.add(p.getNom());
-			array.add(p.getCoutFabrication());
-			array.add(TVA*p.getCoutFabrication()*marge);
+			array.add(p.getName());
+			array.add(p.getCout_de_fabrication());
+			array.add(TVA*p.getCout_de_fabrication()*marge);
 			json.put(i, array);
 		}
 		return json.toJSONString();
